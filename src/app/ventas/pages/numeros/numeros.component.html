@@ -1,0 +1,24 @@
+<div class="text-layout">
+  <h1>PIPES DECIMAL Y PORCENTAJE</h1>
+  <p>pipes incluidos en angular - Usualmente en el commonModule</p>
+</div>
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="Ventas|number" subheader={{ventasNetas}}>
+      {{ ventasNetas + 300000000 | number:'1.2-2' }}
+    </p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="Ventas |currency" subheader={{ventasNetas}}>
+      {{ ventasNetas + 300000000 |currency:'CAD':'symbol-narrow':'1.0-4'}}
+    </p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="Porcentaje" subheader={{porcentaje}}>
+      {{ porcentaje | percent:'2.2-2' }}
+    </p-card>
+  </div>
+</div>
